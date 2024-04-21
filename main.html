@@ -13,7 +13,14 @@
 			//Write your code here
 			if(arr.length==0 || arr.length==1)
 				return -Infinity
-			
+			let flag=0;
+			for(i=0;i<arr.length;i++)
+				{
+					if (arr[i]==arr[i+1])
+						flag=1;
+				}
+			if(flag==1)
+				return -Infinity
 			const a=arr.sort();
 			const a1=a.reverse();
 			return a1[1];
